@@ -193,8 +193,8 @@ export class I18nService<K = Record<string, unknown>>
       options = args;
     }
 
-    const lang = options.lookupProperty(options.data.root, 'i18nLang');
-    return this.t<P>(key, { lang, args });
+    // const lang = options.lookupProperty(options.data.root, 'i18nLang');
+    return this.t<P>(key, { lang: args });
   };
 
   private translateObject(
